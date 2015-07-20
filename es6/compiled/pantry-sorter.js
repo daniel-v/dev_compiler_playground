@@ -4,6 +4,14 @@ var _createClass = (function () { function defineProperties(target, props) { for
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
+/**
+ * Sorter class that uses DOM as a source of data
+ * and will sort the DOM Elements based on a user defined criteria
+ *
+ * @example
+ * new PantrySorter(".sort-these").sort((a, b) => a.localeCompare(b), e => e.textContent );
+ */
+
 var PantrySorter = (function () {
     /**
      *
@@ -25,8 +33,8 @@ var PantrySorter = (function () {
 
         /**
          * Sort the DOM elements
-         * @param {Function} comparator Comperator implementation
-         * @param {function} compareBy The prop by which the comparison should happen
+         * @param {function} comparator Comperator function implementation
+         * @param {function} compareBy The property by which the comparison should happen
          */
         value: function sort() {
             var comparator = arguments.length <= 0 || arguments[0] === undefined ? null : arguments[0];

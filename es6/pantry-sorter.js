@@ -1,5 +1,12 @@
 "use strict";
 
+/**
+ * Sorter class that uses DOM as a source of data
+ * and will sort the DOM Elements based on a user defined criteria
+ *
+ * @example
+ * new PantrySorter(".sort-these").sort((a, b) => a.localeCompare(b), e => e.textContent );
+ */
 class PantrySorter {
     /**
      *
@@ -14,8 +21,8 @@ class PantrySorter {
 
     /**
      * Sort the DOM elements
-     * @param {Function} comparator Comperator implementation
-     * @param {function} compareBy The prop by which the comparison should happen
+     * @param {function} comparator Comperator function implementation
+     * @param {function} compareBy The property by which the comparison should happen
      */
     sort(comparator = null, compareBy = null) {
         if(typeof comparator !== "function")
