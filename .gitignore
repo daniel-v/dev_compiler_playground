@@ -1,2 +1,5 @@
 .idea
 node_modules
+#dart/pacakges
+#dart/web/packages
+**/packages

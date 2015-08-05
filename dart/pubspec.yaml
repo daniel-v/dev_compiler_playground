@@ -1,0 +1,9 @@
+name: pantrysort
+version: 0.0.0
+description: >
+  Sort DOM elements by a configurable property
+author: Daniel Varga <dvarga@skawa.hu>
+dependencies:
+  browser: any
+  path: any
+  dev_compiler: 0.1.5+1
